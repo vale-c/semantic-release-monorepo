@@ -1,16 +1,20 @@
 {
+  "private": "true",
   "name": "semantic-release-monorepo",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/vale-c/semantic-release-monorepo.git",
+  "author": "Valentina Calabrese <valent95@gmail.com>",
   "license": "MIT",
-  "private": true,
   "workspaces": [
-    "packages/*",
-    "apps/*"
+    "apps/*",
+    "packages/*"
   ],
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
     "@semantic-release/git": "^10.0.1",
+    "@semantic-release/release-notes-generator": "^12.1.0",
     "semantic-release": "^23.0.2",
     "semantic-release-monorepo": "^8.0.2"
   }
