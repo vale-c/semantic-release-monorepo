@@ -5,7 +5,8 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
