@@ -11,7 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # Necessary for semantic-release to access the entire git history.
+          fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -21,6 +22,11 @@ jobs:
 
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'Valentina Calabrese'
+          git config --global user.email 'valent95@gmail.com'
 
       - name: Semantic Release
         run: npx semantic-release
