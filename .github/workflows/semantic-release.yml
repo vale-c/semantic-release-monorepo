@@ -3,7 +3,7 @@ name: Semantic Release
 on:
   push:
     branches:
-      - main # Trigger the workflow on push events to the main branch. Adjust as necessary.
+      - main
 
 jobs:
   release:
@@ -11,14 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          # Fetches all history for all tags and branches, necessary for Lerna/semantic-release to work correctly.
-          fetch-depth: 0
+          fetch-depth: 0 # Necessary for semantic-release to access the entire git history.
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20.8.1' # Use Node.js 16; adjust as needed.
-          # Enables caching of node_modules to speed up the workflow
+          node-version: '20.8.1'
           cache: 'yarn'
 
       - name: Install Dependencies
@@ -26,9 +24,6 @@ jobs:
 
       - name: Semantic Release
         run: npx semantic-release
+        working-directory: ./design-system
         env:
-          # Required for pushing tags and commits back to the repository.
-          # Make sure to set GITHUB_TOKEN as a secret in your repository settings.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Additional environment variables may be required depending on your configuration,
-          # such as NPM_TOKEN for npm package publishing.
