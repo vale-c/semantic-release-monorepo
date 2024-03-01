@@ -26,4 +26,4 @@ jobs:
         run: npx semantic-release
         working-directory: ./packages/design-system
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
