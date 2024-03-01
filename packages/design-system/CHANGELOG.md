@@ -1,3 +1,10 @@
+# [design-system-v1.1.0](https://github.com/vale-c/semantic-release-monorepo/compare/1.0.0...1.1.0) (2024-03-01)
+
+
+### Features
+
+* added semantic release npm package ([2a7e139](https://github.com/vale-c/semantic-release-monorepo/commit/2a7e139ff1c87e4e80695d641795034801522c33))
+
 # design-system-v1.0.0 (2024-03-01)
 
 
