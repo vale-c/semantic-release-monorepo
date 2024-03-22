@@ -1,3 +1,10 @@
+# [design-system-v1.1.1](https://github.com/vale-c/semantic-release-monorepo/compare/1.1.0...1.1.1) (2024-03-22)
+
+
+### Bug Fixes
+
+* adjusted color in example CSS class ([f07ecc0](https://github.com/vale-c/semantic-release-monorepo/commit/f07ecc0f52e8e8435edab959d03d849b56f258aa))
+
 # [design-system-v1.1.0](https://github.com/vale-c/semantic-release-monorepo/compare/1.0.0...1.1.0) (2024-03-01)
 
 
